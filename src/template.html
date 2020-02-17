@@ -1,20 +1,10 @@
-<!--
-  Hello!
-  -
-  Simplefolio is a clean and responsive portfolio template for Developers!
-  Created by Jacobo Martinez.
-  -
-  Github Repo: https://github.com/cobidev/simplefolio/
-  Readme: https://github.com/cobidev/simplefolio/README.md
-  -
-  For business & inquires, contact me -> cobimr@protonmail.com
--->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/>
     <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
 
     <!-- Put here your site title -->
@@ -41,7 +31,20 @@
   <!-- Follow the HTML instructions to create your stunning portfolio website -->
   <body>
     <div id="top"></div>
-
+    <nav>
+      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Menu</Button>
+      <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <MenuItem onClick={handleClose}>Sobre Mim</MenuItem>
+          <MenuItem onClick={handleClose}>Portefólio</MenuItem>
+          <MenuItem onClick={handleClose}>Contactos</MenuItem>
+        </Menu>
+    </nav>
     <!-- **** Hero Section **** -->
     <div id="hero" class="jumbotron">
       <div class="container">
